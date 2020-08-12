@@ -36,7 +36,7 @@ export default class ReactImageFallback extends Component {
 		this.setDisplayImage({ image: this.props.src, fallbacks: this.props.fallbackImage });
 	}
 
-	componentWillReceiveProps(nextProps) {
+	componentDidUpdate(nextProps) {
 		if (nextProps.src !== this.props.src) {
 			this.isLoaded = false;
 			if (nextProps.initialImage) {
@@ -98,10 +98,10 @@ export default class ReactImageFallback extends Component {
 	render() {
 		return (
 			typeof this.state.imageSource === "string"
-			?
-			<img {...filterInvalidDOMProps(this.props)} src={this.state.imageSource} />
-			:
-			this.state.imageSource
+				?
+				<img {...filterInvalidDOMProps(this.props)} src={this.state.imageSource} />
+				:
+				this.state.imageSource
 		);
 	}
 }

@@ -1,6 +1,6 @@
 {
   "name": "@studysync/react-image-fallback",
-  "version": "8.0.3",
+  "version": "8.0.5",
   "description": "if your image doesn't exist, fallback onto another provided image.",
   "main": "lib/index.js",
   "scripts": {
